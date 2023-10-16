@@ -39,6 +39,25 @@ public class UserServiceTest {
         Assertions.assertTrue(result);
     }
 
+    /**
+     * 测试添加用户
+     */
+    @Test
+    public void testAddUser1() {
+        User user = new User();
+        user.setUsername("dogYupi");
+        user.setUserAccount("123");
+        user.setAvatarUrl("https://636f-codenav-8grj8px727565176-1256524210.tcb.qcloud.la/img/logo.png");
+        user.setGender(0);
+        user.setUserPassword("xxx");
+        user.setPhone("123");
+        user.setEmail("456");
+        boolean result = userService.save(user);
+        System.out.println(user.getId());
+        Assertions.assertTrue(result);
+    }
+
+
     // https://www.code-nav.cn/
 
     /**
